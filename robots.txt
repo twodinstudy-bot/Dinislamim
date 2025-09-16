@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://twodinstudy-bot.github.io/Dinislamim/sitemap.xml
