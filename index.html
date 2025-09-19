@@ -1884,7 +1884,7 @@
 <!-- Zikir Button Section -->
 <section class="zikir-section">
   <div class="nucleus-wrap">
-    <button id="countBtn">জিকির করুন </button>
+    <button id="countBtn">জিকির করুন</button>
   </div>
 </section>
 
@@ -1892,16 +1892,16 @@
   body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: #f9fafb; /* সাধারণ background */
+    background: #f9fafb;
   }
 
-  /* শুধু জিকির সেকশনকে glow effect background দেব */
+  /* Section background */
   .zikir-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 0;
-    background: radial-gradient(circle at top,#dbeafe,#f9fafb);
+    background: radial-gradient(circle at top, #e0f2fe, #f9fafb);
   }
 
   .nucleus-wrap {
@@ -1915,17 +1915,17 @@
   .nucleus-wrap::before {
     content: "";
     position: absolute;
-    width: clamp(160px, 50vw, 280px);
-    height: clamp(160px, 50vw, 280px);
+    width: clamp(240px, 75vw, 380px);
+    height: clamp(240px, 75vw, 380px);
     border-radius: 50%;
     background: conic-gradient(
       from 0deg,
-      rgba(255,215,0,0.35),
-      rgba(255,223,100,0.25),
-      rgba(255,215,0,0.35)
+      rgba(255,215,0,0.45),
+      rgba(255,223,100,0.35),
+      rgba(255,215,0,0.45)
     );
-    animation: spin 18s linear infinite;
-    filter: blur(6vw);
+    animation: spin 16s linear infinite;
+    filter: blur(5vw);
     z-index: 0;
   }
 
@@ -1934,24 +1934,26 @@
     100% { transform: rotate(360deg); }
   }
 
-  /* main nucleus button */
+  /* main luxury nucleus button */
   #countBtn {
-    width: clamp(110px, 30vw, 170px);
-    height: clamp(110px, 30vw, 170px);
+    width: clamp(180px, 48vw, 260px);
+    height: clamp(180px, 48vw, 260px);
     border-radius: 50%;
-    border: 3px solid gold;
-    background: radial-gradient(circle at 30% 30%,#38bdf8,#2563eb,#0ea5e9);
-    color: gold;
-    font-size: clamp(15px, 5vw, 22px);
+    border: 4px solid gold;
+    background: radial-gradient(circle at 30% 30%, #0099cc, #0066aa, #004488);
+    color: #ffffff; /* <-- সাদা টেক্সট */
+    font-size: clamp(20px, 6vw, 30px);
     font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px rgba(255,255,255,0.7);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
-    box-shadow:
-      0 8px 20px rgba(0,0,0,0.25),
-      0 0 25px rgba(255,215,0,0.6),
-      inset 0 6px 14px rgba(255,255,255,0.25);
+    box-shadow: 
+      0 10px 25px rgba(0,0,0,0.3),
+      0 0 30px rgba(255,215,0,0.7),
+      inset 0 6px 16px rgba(255,255,255,0.25);
     position: relative;
     z-index: 1;
     transition: all 0.35s ease;
@@ -1968,13 +1970,14 @@
     height: 250%;
     background: linear-gradient(
       120deg,
-      rgba(255,255,255,0.6) 0%,
-      rgba(255,255,255,0.1) 50%,
+      rgba(255,255,255,0.7) 0%,
+      rgba(255,255,255,0.15) 50%,
       rgba(255,255,255,0) 100%
     );
     transform: rotate(25deg);
-    animation: shine 6s infinite linear;
+    animation: shine 5s infinite linear;
     pointer-events: none;
+    border-radius: 50%;
   }
 
   @keyframes shine {
@@ -1983,18 +1986,19 @@
   }
 
   #countBtn:hover {
-    transform: scale(1.08);
-    box-shadow:
-      0 14px 28px rgba(0,0,0,0.3),
-      0 0 36px rgba(255,215,0,0.9),
-      inset 0 6px 14px rgba(255,255,255,0.35);
+    transform: scale(1.1);
+    box-shadow: 
+      0 16px 32px rgba(0,0,0,0.35),
+      0 0 42px rgba(255,215,0,1),
+      inset 0 8px 18px rgba(255,255,255,0.35);
   }
 
   #countBtn:active {
-    transform: scale(0.94);
-    box-shadow: inset 0 8px 18px rgba(0,0,0,0.3);
+    transform: scale(0.92);
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.4);
   }
 </style>
+
 
   <div style="margin-top:25px;">
     <button id="resetBtn" style="padding:10px 20px; margin:5px; background:#1E3A8A; color:#fff; border:none; border-radius:8px; font-size:14px;">🔄 Reset</button>
@@ -2178,6 +2182,7 @@ saveBtn.addEventListener("click", () => {
   </footer>
 </body>
 </html>
+
 
 
 
